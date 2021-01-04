@@ -1,0 +1,28 @@
+.player-stats-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    .conference-bar {
+      position: sticky;
+      top: 0px;
+      background: #17408B;
+      color: white;
+      opacity: 90%;
+      display: flex;
+    }
+  
+    .title {
+      margin-left: 5%;
+    }
+  
+    .player-stats {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 5%;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }

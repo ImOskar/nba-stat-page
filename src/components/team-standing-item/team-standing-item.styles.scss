@@ -1,0 +1,75 @@
+.standing-item {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-bottom: 1px solid rgba(38,51,67,.2);
+  
+    .image {
+      width: 50px;
+      height: 50px;
+      background-size: cover;
+      background-position: center;
+      margin-right: 5px;
+    }
+  
+    .team-detail {
+      width: 60%;
+      height: 5%;
+      display: flex;
+      font-size: 18px;
+  
+      .name {
+        margin-right: 5px;
+      }
+  
+      .rank {
+        width: 5%;
+      }
+    }
+
+    .wins-losses {
+      justify-content: space-between;
+      width: 30%;
+      display: flex;
+
+      .wins,
+      .winlose {
+        flex-basis: 33%;
+      }
+
+      .games-behind {
+        flex-basis: 10%;
+      }
+    }
+
+    .text {
+      font-size: xx-large;
+      align-items: center;
+      display: flex;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .games-behind {
+        display: none;
+      }
+
+      .winlose {
+        display: none;
+      }
+    } 
+
+    @media only screen and (max-width: 600px) {
+      .team {
+        margin: 0;
+      } 
+
+      .name {
+        display: none;
+      }
+
+      
+    }
+  }

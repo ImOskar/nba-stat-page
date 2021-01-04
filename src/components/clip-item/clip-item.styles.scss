@@ -1,0 +1,19 @@
+.frame-div {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 250px;
+    justify-content: space-evenly;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 2px 16px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+
+    .frame {
+        width: 100%;
+    }
+
+    .description {
+        font-size: 20px;
+    }
+}

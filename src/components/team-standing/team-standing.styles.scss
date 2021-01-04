@@ -1,0 +1,33 @@
+.team {
+
+    .conference-bar {
+        position: sticky;
+        top: 0px;
+        background: #17408B;
+        color: white;
+        opacity: 90%;
+        display: flex;
+
+        .title {
+          width: 70%;
+          margin-left: 5%;
+        }
+
+        .bar-details {
+          display: flex;
+          justify-content: space-between;
+          width: 30%;
+          margin-right: 5%;
+        }
+    }
+    
+    @media only screen and (max-width: 700px) {
+        .games-behind {
+          display: none;
+        }
+  
+        .winlose {
+          display: none;
+        }
+      } 
+}
