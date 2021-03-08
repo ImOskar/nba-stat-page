@@ -1,18 +1,43 @@
-import React from 'react';
+import React from "react";
+import logo from "../../getLogoSvg";
 
-import './scores-item-styles.scss';
+import "./scores-item-styles.scss";
 
-const ScoresItem = ({ winner, winnerPts, loser, loserPts}) => (
-    <div className='scores-item'>
-        <div className='scores'>
-            <span className='team'>{winner}</span>
-            <span className='points winner'>{winnerPts}</span>
-        </div>
-        <div className='scores'>
-            <span className='team'>{loser}</span>
-            <span className='points'>{loserPts}</span>
-        </div>
+const ScoresItem = ({
+  winner,
+  homeTeam,
+  homeAbbrev,
+  homePts,
+  awayTeam,
+  awayAbbrev,
+  awayPts,
+}) => {
+  const home = logo(homeAbbrev);
+  const away = logo(awayAbbrev);
+  return (
+    <div className="scores-item">
+      <div className={winner === homeTeam ? "scores winner" : "scores"}>
+        <span className="team">
+          <div
+            className="lg logo"
+            style={{ backgroundImage: `url(${home})` }}
+          />
+          {homeAbbrev}
+        </span>
+        <span className="points">{homePts}</span>
+      </div>
+      <div className={winner === awayTeam ? "scores winner" : "scores"}>
+        <span className="team">
+          <div
+            className="lg logo"
+            style={{ backgroundImage: `url(${away})` }}
+          />
+          {awayAbbrev}
+        </span>
+        <span className="points">{awayPts}</span>
+      </div>
     </div>
-)
+  );
+};
 
 export default ScoresItem;

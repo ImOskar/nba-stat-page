@@ -5,7 +5,7 @@ import './player-stat-item.styles.scss';
 const PlayerStatItem = ({ id, name, perGame, stat, rank, imageUrl}) => (
     <div className='player-stat-item'>
         <div className='rank-header'>
-            <span className='rank'>{rank}.</span>
+            <span className='rank'>{rank}</span>
         </div>
         {/* <div 
             className='image' 

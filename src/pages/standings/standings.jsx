@@ -1,33 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import TeamStandings from "../../components/team-standing/team-standing";
+import useStatsApi from "../../hooks/useStatsApi";
 
-import TeamStandings from '../../components/team-standing/team-standing'
+function StandingsPage() {
+  const [{ data, isLoading, isError }, fetchStats] = useStatsApi(
+    process.env.REACT_APP_API_URL + "standings"
+  );
 
-import TEAM_DATA from './team-standings.data.js';
-
-
-class StandingsPage extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            teamData: TEAM_DATA
-        }
-    }
-
-    render() {
-        const {teamData} = this.state;
-        return(
-            <div >
-                {
-                    teamData
-                    .map(({ id, ...otherTeamDataProps}) => (
-                        <TeamStandings key={id} {...otherTeamDataProps} />
-                    ))
-                }
-
-            </div>
-
-        );
-    }
+  return (
+    <div className="team-standings">
+      {isError && <h1>ERROR FETCHING DATA</h1>}
+      {isLoading ? (
+        <h1>LOADING</h1>
+      ) : (
+        data.map((teamStanding) => (
+          <TeamStandings key={teamStanding.id} {...teamStanding} />
+        ))
+      )}
+    </div>
+  );
 }
 
 export default StandingsPage;

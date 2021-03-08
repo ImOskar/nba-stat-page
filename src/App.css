@@ -3,6 +3,12 @@ body {
     padding: 20px 60px;
 }
 
+@media only screen and (max-width: 900px) {
+    body {
+        padding: 0;
+      }   
+  }
+
 a{
     text-decoration: none;
     color: black;

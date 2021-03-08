@@ -1,32 +1,26 @@
-import React from 'react';
-import './player-stats-page.styles.scss';
+import React, { useEffect, useState } from "react";
+import "./player-stats-page.styles.scss";
+import PlayerStats from "../../components/player-stats/player-stats";
+import useStatsApi from "../../hooks/useStatsApi";
 
-import NBA_DATA from './nba-stats.data';
+function PlayerStatsPage() {
+  const [{ data, isLoading, isError }, fetchStats] = useStatsApi(
+    process.env.REACT_APP_API_URL + "players"
+  );
 
-import PlayerStats from '../../components/player-stats/player-stats';
-
-class PlayerStatsPage extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            playerData: NBA_DATA
-        };
-    }
-
-    render() {
-        const {playerData} = this.state;
-        return (
-            <div className='player-stats-page'>
-                {
-                    playerData.map(({ id, ...otherplayerDataProps}) => (
-                        <PlayerStats key={id} {...otherplayerDataProps} />
-
-                    ))
-                }
-            </div>
-        );
-    }
+  return (
+    <div className="player-stats-page">
+      {isError && <h1>ERROR FETCHING DATA</h1>}
+      {isLoading
+        ? console.log("empty")
+        : data.map((playerStat) => (
+            <PlayerStats
+              key={playerStat.id}
+              title={playerStat.id}
+              {...playerStat}
+            />
+          ))}
+    </div>
+  );
 }
-
 export default PlayerStatsPage;

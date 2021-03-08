@@ -1,18 +1,22 @@
-import React from 'react';
+import React from "react";
 
-import './clip-item.styles.scss';
+import "./clip-item.styles.scss";
 
-const ClipItem = ({ description, url }) => (
-    <div className='frame-div'>
+const ClipItem = ({ name, url }) => (
+  <li className="frame-div">
+    {/*  
         <iframe 
             title='videoPlayer' 
             className='frame' 
             src={url}
             frameBorder='0' 
-            allowFullScreen >
+        >
         </iframe>
-        <span className='description'>{description}</span>
-    </div>
+        */}
+    <a href={url}>
+      <span className="description">{name}</span>
+    </a>
+  </li>
 );
 
 export default ClipItem;

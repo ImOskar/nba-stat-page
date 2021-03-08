@@ -3,13 +3,14 @@
     flex-direction: column;
     width: 50%;
 
-    .conference-bar {
+    @media only screen and (max-width: 800px) {
+      width: 100%;
+  }
+
+    .player-bar {
       position: sticky;
       top: 0px;
-      background: #17408B;
-      color: white;
-      opacity: 90%;
-      display: flex;
+      justify-content: flex-start;
     }
   
     .title {
