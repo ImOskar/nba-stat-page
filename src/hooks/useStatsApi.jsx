@@ -15,8 +15,8 @@ const useStatsApi = (fetchUrl) => {
       try {
         const result = await axios(url);
         const resultData = result.data.stats;
-        setIsLoading(false);
         setData(resultData);
+        setIsLoading(false);
       } catch (error) {
         setIsError(true);
         console.log("Error: " + error);

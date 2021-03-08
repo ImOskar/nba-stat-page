@@ -31,7 +31,7 @@ import was from "./assets/team-logos/was.svg";
 
 const logos = [
   { abbr: "ATL", logo: atl },
-  { abbr: "BKN", logo: bkn },
+  { abbr: "BKN, BRK", logo: bkn },
   { abbr: "BOS", logo: bos },
   { abbr: "CHA, CHO", logo: cha },
   { abbr: "CHI", logo: chi },

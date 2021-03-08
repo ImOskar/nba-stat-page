@@ -4,10 +4,10 @@ import TitleBar from "../title-bar/title-bar";
 
 import "./team-standing.styles.scss";
 
-const TeamStanding = ({ title, items }) => (
+const TeamStanding = ({ id, items }) => (
   <div className="conference">
     <TitleBar
-      title={title.toUpperCase()}
+      title={id.toUpperCase()}
       details={true}
       extraClass="standings-bar"
     />

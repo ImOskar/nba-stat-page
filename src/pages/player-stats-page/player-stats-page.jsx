@@ -11,15 +11,17 @@ function PlayerStatsPage() {
   return (
     <div className="player-stats-page">
       {isError && <h1>ERROR FETCHING DATA</h1>}
-      {isLoading
-        ? console.log("empty")
-        : data.map((playerStat) => (
-            <PlayerStats
-              key={playerStat.id}
-              title={playerStat.id}
-              {...playerStat}
-            />
-          ))}
+      {isLoading ? (
+        <h1>LOADING</h1>
+      ) : (
+        data.map((playerStat) => (
+          <PlayerStats
+            key={playerStat.id}
+            title={playerStat.id}
+            {...playerStat}
+          />
+        ))
+      )}
     </div>
   );
 }
