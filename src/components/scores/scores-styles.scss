@@ -1,48 +1,40 @@
 .scores-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 
-    .scores-scroll {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 40px;
-    
-        .scroll {
-            background: none;
-            color: inherit;
-            border: none;
-            padding: 0;
-            font: inherit;
-            cursor: pointer;
-            outline: inherit;
-            height: 25px;
-            width: 25px;
-    
-            @media only screen and (max-width: 650px) {
-                height: 20px;
-                width: 20px;
-            }
-        }
-    
-        .left-btn {
-            background-image: url(../../assets/left-chevron.svg);
-        }
-    
-        .right-btn {
-            background-image: url(../../assets/right-chevron.svg);
-        }
-    
-        .scores-content {
-            margin: 20px;
-            overflow: hidden;
-            width: 85%;
-    
-            .game-scores {
-                display: flex;
-                transition: all .6s;
-            }
-        }
+  .scores-scroll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+
+    .scroll {
+      background: none;
+      color: inherit;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+      height: 25px;
+      width: 25px;
+
+      @media only screen and (max-width: 650px) {
+        height: 20px;
+        width: 20px;
+      }
     }
+
+    .scores-content {
+      margin: 20px;
+      overflow: hidden;
+      width: 85%;
+
+      .game-scores {
+        display: flex;
+        transition: all 0.6s;
+      }
+    }
+  }
 }

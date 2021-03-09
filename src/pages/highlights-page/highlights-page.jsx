@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Clips from "../../components/clips/clips";
+import Loader from "../../components/loader/loader";
+import Error from "../../components/error/error";
 import useStatsApi from "../../hooks/useStatsApi";
 import "./highlights-page.styles.scss";
 
 function HighlightsPage() {
-  const [{ data, isLoading, isError }, fetchStats] = useStatsApi(
-    process.env.REACT_APP_API_URL + "highlights"
-  );
+  const [{ data, isLoading, isError }, fetchStats] = useStatsApi();
+
+  useEffect(() => {
+    fetchStats(process.env.REACT_APP_API_URL + "highlights");
+  }, [fetchStats]);
 
   return (
     <div className="highlights">
-      {isError && <h1>ERROR FETCHING DATA</h1>}
-      {isLoading ? <h1>LOADING</h1> : <Clips clips={data} />}
+      {isLoading ? <Loader /> : isError ? <Error /> : <Clips clips={data} />}
     </div>
   );
 }
