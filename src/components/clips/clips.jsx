@@ -7,10 +7,14 @@ import "./clips.styles.scss";
 const Clips = ({ clips }) => {
   return (
     <div className="clips-container">
-      <TitleBar title="HIGHLIGHTS" details={false} extraClass="highlights" />
+      <TitleBar
+        title="HIGHLIGHTS"
+        details={false}
+        extraClass="highlights player-bar"
+      />
       <ul className="clips">
-        {clips.map(({ i, ...otherClipsProps }) => (
-          <ClipItem key={i} {...otherClipsProps} />
+        {clips.map((clip) => (
+          <ClipItem key={clip.url} {...clip} />
         ))}
       </ul>
     </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../getLogoSvg";
+import logo from "../../util/getLogoSvg";
 
 import "./scores-item-styles.scss";
 

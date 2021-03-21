@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../getLogoSvg";
+import logo from "../../util/getLogoSvg";
 import "./team-standing-item.styles.scss";
 
 const TeamItem = ({

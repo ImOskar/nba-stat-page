@@ -1,29 +1,19 @@
 .player-stats-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+  }
+
+  .player-stats {
     display: flex;
     flex-direction: column;
-    width: 50%;
-
-    @media only screen and (max-width: 800px) {
-      width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
-
-    .player-bar {
-      position: sticky;
-      top: 0px;
-      justify-content: flex-start;
-    }
-  
-    .title {
-      margin-left: 5%;
-    }
-  
-    .player-stats {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin-top: 5%;
-      margin-left: 5%;
-      margin-right: 5%;
-    }
-  }
+}
