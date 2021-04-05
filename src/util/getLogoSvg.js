@@ -29,42 +29,41 @@ import tor from "../assets/team-logos/tor.svg";
 import uta from "../assets/team-logos/uta.svg";
 import was from "../assets/team-logos/was.svg";
 
-const logos = [
-  { abbr: "ATL", logo: atl },
-  { abbr: "BKN, BRK", logo: bkn },
-  { abbr: "BOS", logo: bos },
-  { abbr: "CHA, CHO", logo: cha },
-  { abbr: "CHI", logo: chi },
-  { abbr: "CLE", logo: cle },
-  { abbr: "DAL", logo: dal },
-  { abbr: "DEN", logo: den },
-  { abbr: "DET", logo: det },
-  { abbr: "GSW", logo: gsw },
-  { abbr: "HOU", logo: hou },
-  { abbr: "IND", logo: ind },
-  { abbr: "LAC", logo: lac },
-  { abbr: "LAL", logo: lal },
-  { abbr: "MEM", logo: mem },
-  { abbr: "MIA", logo: mia },
-  { abbr: "MIL", logo: mil },
-  { abbr: "MIN", logo: min },
-  { abbr: "NOP", logo: nop },
-  { abbr: "NYK", logo: nyk },
-  { abbr: "OKC", logo: okc },
-  { abbr: "ORL", logo: orl },
-  { abbr: "PHI", logo: phi },
-  { abbr: "PHX, PHO", logo: phx },
-  { abbr: "POR", logo: por },
-  { abbr: "SAC", logo: sac },
-  { abbr: "SAS", logo: sas },
-  { abbr: "TOR", logo: tor },
-  { abbr: "UTA", logo: uta },
-  { abbr: "WAS", logo: was },
-];
+const logos = {
+  ATL: atl,
+  BRK: bkn,
+  BOS: bos,
+  CHO: cha,
+  CHI: chi,
+  CLE: cle,
+  DAL: dal,
+  DEN: den,
+  DET: det,
+  GSW: gsw,
+  HOU: hou,
+  IND: ind,
+  LAC: lac,
+  LAL: lal,
+  MEM: mem,
+  MIA: mia,
+  MIL: mil,
+  MIN: min,
+  NOP: nop,
+  NYK: nyk,
+  OKC: okc,
+  ORL: orl,
+  PHI: phi,
+  PHO: phx,
+  POR: por,
+  SAC: sac,
+  SAS: sas,
+  TOR: tor,
+  UTA: uta,
+  WAS: was,
+};
 
-function getLogo(teamName) {
-  let logo = logos.filter((obj) => obj.abbr.includes(teamName));
-  return logo[0].logo;
-}
+const getLogo = (teamName) => {
+  return logos[teamName];
+};
 
 export default getLogo;
