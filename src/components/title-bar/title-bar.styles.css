@@ -1,0 +1,19 @@
+.title-bar {
+  display: flex;
+  justify-content: center;
+  background: #17408b;
+  color: white;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.sticky-bar {
+  position: sticky;
+  top: 0px;
+}
+
+@media only screen and (max-width: 600px) {
+  .standings-bar {
+    font-size: 10px;
+  }
+}

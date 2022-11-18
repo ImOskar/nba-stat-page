@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
-import "./error.styles.scss";
+import "./error.styles.css";
 
 const Error = () => (
   <div className="error">

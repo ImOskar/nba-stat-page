@@ -1,0 +1,35 @@
+.header {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+@media only screen and (max-width: 600px) {
+  .header {
+    margin: 0;
+  }
+}
+.logo-container {
+  height: 100%;
+  padding: 10px 10px;
+  display: flex;
+  width: 20%;
+  align-items: center;
+}
+.logo {
+  padding: 5px;
+  color: #de5a1a;
+}
+
+.options {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.option {
+  padding: 10px 15px;
+}

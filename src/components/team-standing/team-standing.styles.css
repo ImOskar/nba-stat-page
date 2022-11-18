@@ -1,0 +1,57 @@
+.styled-table {
+  border-collapse: collapse;
+  margin: 30px auto;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr th {
+  position: sticky;
+  top: 55px;
+  background-color: #17408b;
+  opacity: 0.9;
+  color: #ffffff;
+  text-align: left;
+  z-index: 1;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #17408b;
+}
+
+.team-table {
+  min-width: 600px;
+}
+
+@media only screen and (max-width: 600px) {
+  .table-wrapper {
+    overflow: auto;
+    height: 650px;
+  }
+
+  .conference {
+    margin: 0;
+  }
+
+  .styled-table {
+    font-size: 0.7em;
+  }
+
+  .styled-table thead tr th {
+    top: 0;
+  }
+
+  .short-name {
+    display: block;
+  }
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
-import "./loader.styles.scss";
+import "./loader.styles.css";
 
 const Loader = () => (
   <div className="loader">

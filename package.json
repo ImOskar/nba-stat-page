@@ -6,12 +6,16 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.12.2",
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.7",
     "axios": "^0.21.1",
-    "node-sass": "^5.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3"
+    "react-scripts": "^2.1.3",
+    "typescript": "^4.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -33,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-router-dom": "^5.3.3"
   }
 }

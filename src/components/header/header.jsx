@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBasketballBall } from "@fortawesome/free-solid-svg-icons";
 
-import { ReactComponent as Logo } from "../../assets/NBA_logo.svg";
-
-import "./header.styles.scss";
+import "./header.styles.css";
 
 const Header = () => (
   <div className="header">
     <Link className="logo-container" to="/">
-      <Logo className="logo" />
-      <span className="logo-title">NBA STATS</span>
+      <FontAwesomeIcon className="logo" icon={faBasketballBall} />
+      <span className="logo-title">B-BALL STATS</span>
     </Link>
     <div className="options">
       <Link className="option" to="/players">
