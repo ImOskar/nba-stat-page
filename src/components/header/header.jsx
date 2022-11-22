@@ -6,12 +6,12 @@ import { faBasketballBall } from "@fortawesome/free-solid-svg-icons";
 import "./header.styles.css";
 
 const Header = () => (
-  <div className="header">
+  <header className="header">
     <Link className="logo-container" to="/">
       <FontAwesomeIcon className="logo" icon={faBasketballBall} />
       <span className="logo-title">B-BALL STATS</span>
     </Link>
-    <div className="options">
+    <nav className="options">
       <Link className="option" to="/players">
         PLAYERS
       </Link>
@@ -21,8 +21,8 @@ const Header = () => (
       <Link className="option" to="/highlights">
         HIGHLIGHTS
       </Link>
-    </div>
-  </div>
+    </nav>
+  </header>
 );
 
 export default Header;

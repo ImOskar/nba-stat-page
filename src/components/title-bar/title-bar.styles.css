@@ -8,6 +8,7 @@
 }
 
 .sticky-bar {
+  height: 55px;
   position: sticky;
   top: 0px;
 }

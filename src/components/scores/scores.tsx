@@ -16,12 +16,13 @@ const Scores = ({ items }: ScoreProps) => {
   const [length, setLength] = useState(0);
   const [x, setX] = useState(0);
   const [width, setWidth] = useState(0);
+  const [needsScroll, setNeedsScroll] = useState(false);
 
   useEffect(() => {
     setX(0);
     setLength(items.length);
-    const w = document.getElementsByClassName("scores-content")[0].clientWidth;
-    setWidth(w);
+    setWidth(getClientWidth());
+    setNeedsScroll(needsScrollBtn());
   }, [items, width]);
 
   const nextSlide = () => {
@@ -36,18 +37,31 @@ const Scores = ({ items }: ScoreProps) => {
   };
 
   const totalSpace = () => {
-    return length * -141 + width;
+    return length * -141 + width - 15;
+  };
+
+  const getClientWidth = () => {
+    return document.getElementsByClassName("scores-content")[0].clientWidth;
+  };
+
+  const needsScrollBtn = () => {
+    return length * 141 > width;
   };
 
   return (
     <div className="scores-scroll">
-      <button id="left" onClick={prevSlide} className="scroll left-btn">
-        <FontAwesomeIcon icon={faChevronLeft} />
-      </button>
+      {needsScroll && (
+        <button id="left" onClick={prevSlide} className="scroll left-btn">
+          <FontAwesomeIcon icon={faChevronLeft} />
+        </button>
+      )}
+
       <div className="scores-content">
         <div
           id="content"
-          className="game-scores"
+          className={
+            needsScroll ? "game-scores" : "game-scores center-game-scores"
+          }
           style={{ transform: `translateX(${x}px)` }}
         >
           {items.map((score) => (
@@ -55,9 +69,11 @@ const Scores = ({ items }: ScoreProps) => {
           ))}
         </div>
       </div>
-      <button id="right" onClick={nextSlide} className="scroll right-btn">
-        <FontAwesomeIcon icon={faChevronRight} />
-      </button>
+      {needsScroll && (
+        <button id="right" onClick={nextSlide} className="scroll right-btn">
+          <FontAwesomeIcon icon={faChevronRight} />
+        </button>
+      )}
     </div>
   );
 };
