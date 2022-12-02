@@ -28,16 +28,16 @@ const Scores = ({ items }: ScoreProps) => {
   const nextSlide = () => {
     let space = totalSpace();
     if (x === space) setX(0);
-    else setX(x - 141 < space ? space : x - 141);
+    else setX(x - 142 < space ? space : x - 142);
   };
 
   const prevSlide = () => {
     if (x === 0) setX(totalSpace());
-    else setX(x + 141 > 0 ? 0 : x + 141);
+    else setX(x + 142 > 0 ? 0 : x + 142);
   };
 
   const totalSpace = () => {
-    return length * -141 + width - 15;
+    return length * -142 + width - 40;
   };
 
   const getClientWidth = () => {
@@ -45,7 +45,7 @@ const Scores = ({ items }: ScoreProps) => {
   };
 
   const needsScrollBtn = () => {
-    return length * 141 > width;
+    return length * 142 > width;
   };
 
   return (
